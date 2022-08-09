@@ -1,0 +1,6 @@
+.home {
+  height: 100vh;
+  min-height: 500px;
+  margin-top: 130px;
+  background: url(/public/img/hero.jpg) no-repeat center center/cover;
+}
