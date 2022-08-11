@@ -5,7 +5,11 @@ const Home = () => {
   return (
     <section id='home' className={cn.home}>
       <InnerWidth>
-        
+        <div className={cn.home_content}>
+          <h3 className={cn.about}>about me</h3>
+          <br />
+          <h1 className={cn.main_title}>Natalia Nails Art Studio</h1>
+        </div>
       </InnerWidth>
     </section>
   );

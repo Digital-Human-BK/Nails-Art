@@ -1,0 +1,33 @@
+.navbar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: var(--clr-nav);
+  transition: .5s linear;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.links_item {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  
+}
+
+.link {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--clr-primary);
+}
+
+@media screen and (min-width: 600px) {
+  .nav_links {
+    flex-direction: row;
+  }
+}

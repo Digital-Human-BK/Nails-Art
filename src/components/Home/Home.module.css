@@ -1,6 +1,35 @@
 .home {
-  height: 100vh;
+  height: calc(100vh - 80px);
   min-height: 500px;
-  margin-top: 130px;
-  background: url(/public/img/hero.jpg) no-repeat center center/cover;
+  text-align: left;
+  margin-top: 80px;
+  background: url(/public/img/hero2.jpg) no-repeat center center/cover;
+}
+
+.home_content {
+  padding-top: 50vh;
+}
+
+.about {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1rem 0.75rem;
+  padding-right: 5rem;
+  background-color: var(--clr-primary);
+}
+
+.main_title {
+  display: inline-block;
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1.5rem 0.75rem;
+  color: var(--clr-primary);
+  background-color: var(--clr-secondary);
+}
+
+@media screen and (min-width: 400px){
+  .main_title {
+    padding-right: 3rem;
+  }
 }

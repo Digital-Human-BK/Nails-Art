@@ -1,0 +1,27 @@
+.btn {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: var(--clr-primary);
+  background-color: var(--clr-accent);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.right_btn {
+  margin-left: unset;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+@media screen and (min-width: 760px) {
+  .right_btn {
+    margin-left: 50%;
+  }
+}
