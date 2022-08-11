@@ -1,6 +1,6 @@
 .contacts {
   width: 100%;
-  height: calc(70vh + 45vw);
+  height: calc(70vh + 55vw);
   position: relative;
   display: flex;
 }

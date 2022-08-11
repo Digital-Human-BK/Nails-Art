@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   background-color: var(--clr-nav);
-  transition: .5s linear;
+  transition: .2s linear;
 }
 
 .nav_links {

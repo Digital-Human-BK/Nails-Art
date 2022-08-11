@@ -27,7 +27,7 @@ const Navbar = ({toggleNav}) => {
         </li>
         <li className={cn.links_item}>
           <HashLink className={cn.link} to={'/#works'}>
-            my works
+            my work
           </HashLink>
         </li>
         <li className={cn.links_item}>

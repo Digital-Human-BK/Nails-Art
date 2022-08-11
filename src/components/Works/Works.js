@@ -5,7 +5,7 @@ const Works = () => {
   return (
     <section id='works' className={cn.works}>
       <InnerWidth>
-        <h2 className={cn.section_title}>My works</h2>
+        <h2 className={cn.section_title}>My work</h2>
         <p className={cn.section_desc}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
           reiciendis tenetur dicta exercitationem nihil! Ullam magnam debitis

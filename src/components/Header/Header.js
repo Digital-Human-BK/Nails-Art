@@ -16,7 +16,7 @@ const Header = () => {
     <header className={cn.header}>
       <InnerWidth>
         <div className={cn.header_menu}>
-          <HashLink to='/#home' className={cn.logo_link}>
+          <HashLink to='/#home' onClick={()=> setShowNav(false)} className={cn.logo_link}>
             <img className={cn.logo} src='/img/logo.png' alt='logo' />
           </HashLink>
           <button onClick={toggleNav} className={cn.hamburger_menu}>
