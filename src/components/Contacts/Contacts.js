@@ -55,11 +55,19 @@ const Contacts = () => {
               </ul>
               <p className={cn.message}>See You soon!</p>
             </div>
-            <img
+            {/* <img
               className={cn.content_img}
               src='/img/contacts.jpg'
               alt='Nail Polish'
-            />
+            /> */}
+            <iframe
+              title='Studio Location'
+              className={cn.map}
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.836802801314!2d24.153857715716207!3d43.21291218880673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aba37aad50baad%3A0xc44296f5b8c55c4e!2z0YPQuy7QmNCy0LDQvSDQktCw0LfQvtCyIDY4LCA1NzcwINCb0YPQutC-0LLQuNGC!5e0!3m2!1sbg!2sbg!4v1660655040047!5m2!1sbg!2sbg'
+              allowFullScreen=''
+              loading='lazy'
+              referrerPolicy='no-referrer-when-downgrade'
+            ></iframe>
           </div>
         </InnerWidth>
       </div>
