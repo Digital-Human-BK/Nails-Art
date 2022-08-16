@@ -13,23 +13,29 @@ const Header = () => {
   };
 
   return (
-    <header className={cn.header}>
-      <InnerWidth>
-        <div className={cn.header_menu}>
-          <HashLink to='/#home' onClick={()=> setShowNav(false)} className={cn.logo_link}>
-            <img className={cn.logo} src='/img/logo.png' alt='logo' />
-          </HashLink>
-          <button onClick={toggleNav} className={cn.hamburger_menu}>
-            {showNav ? (
-              <i className='fa-solid fa-xmark' />
-            ) : (
-              <i className='fa-solid fa-bars' />
-            )}
-          </button>
-          {showNav && <Navbar toggleNav={toggleNav} />}
-        </div>
-      </InnerWidth>
-    </header>
+    <>
+      <header className={cn.header}>
+        <InnerWidth>
+          <div className={cn.header_menu}>
+            <HashLink
+              to='/#home'
+              onClick={() => setShowNav(false)}
+              className={cn.logo_link}
+            >
+              <img className={cn.logo} src='/img/logo.png' alt='logo' />
+            </HashLink>
+            <button onClick={toggleNav} className={cn.hamburger_menu}>
+              {showNav ? (
+                <i className='fa-solid fa-xmark' />
+              ) : (
+                <i className='fa-solid fa-bars' />
+              )}
+            </button>
+          </div>
+        </InnerWidth>
+      </header>
+      <Navbar toggleNav={toggleNav} showNav={showNav}/>
+    </>
   );
 };
 

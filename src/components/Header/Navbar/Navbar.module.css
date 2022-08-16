@@ -1,10 +1,16 @@
 .navbar {
   position: fixed;
-  top: 80px;
+  top: -100px;
   left: 0;
   width: 100%;
   background-color: var(--clr-nav);
   transition: .2s linear;
+  z-index: 9;
+}
+
+.active {
+  top: 80px;
+  left: 0;
 }
 
 .nav_links {
@@ -27,6 +33,14 @@
 }
 
 @media screen and (min-width: 600px) {
+  .navbar {
+    top: 40px;
+  }
+
+  .active {
+    top: 80px;
+  }
+
   .nav_links {
     flex-direction: row;
   }

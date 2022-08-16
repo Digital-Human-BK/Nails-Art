@@ -1,4 +1,4 @@
-import InnerWidth from '../common/InnerWidth/InnerWidth';
+import InnerWidth from '../../common/InnerWidth/InnerWidth';
 import cn from './Services.module.css';
 
 const Services = () => {

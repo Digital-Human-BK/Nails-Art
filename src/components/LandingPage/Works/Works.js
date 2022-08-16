@@ -1,5 +1,5 @@
 import cn from './Works.module.css';
-import InnerWidth from '../common/InnerWidth/InnerWidth';
+import InnerWidth from '../../common/InnerWidth/InnerWidth';
 
 const Works = () => {
   return (

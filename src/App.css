@@ -24,7 +24,11 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
-#home, #offer, #services, #about, #works, #contacts {
+#home {
+  scroll-margin-top: 80px;
+}
+
+#offer, #services, #about, #works, #contacts {
   scroll-margin-top: 60px;
 }
 

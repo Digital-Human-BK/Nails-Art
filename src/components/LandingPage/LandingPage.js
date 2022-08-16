@@ -1,9 +1,9 @@
-import Home from '../Home/Home';
-import Offer from '../Offer/Offer';
-import Services from '../Services/Services';
-import About from '../About/About';
-import Works from '../Works/Works';
-import Contacts from '../Contacts/Contacts';
+import Home from './Home/Home';
+import Offer from './Offer/Offer';
+import Services from './Services/Services';
+import About from './About/About';
+import Works from './Works/Works';
+import Contacts from './Contacts/Contacts';
 
 const LandingPage = () => {
   return (
