@@ -1,6 +1,7 @@
 .contacts {
   width: 100%;
   height: calc(80vh + 55vw);
+  min-height: 740px;
   /* height: calc(70vh + 55vw); */
   position: relative;
   display: flex;
@@ -95,6 +96,7 @@
 @media screen and (min-width: 600px) {
   .contacts {
     height: calc(85vh + 60vw);
+    min-height: unset;
     /* height: calc(70vh + 60vw); */
   }
 }

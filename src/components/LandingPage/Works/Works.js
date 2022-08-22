@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 import cn from './Works.module.css';
 import InnerWidth from '../../common/InnerWidth/InnerWidth';
 
 const Works = () => {
+  const navigate = useNavigate();
   return (
     <section id='works' className={cn.works}>
       <InnerWidth>
@@ -27,7 +30,9 @@ const Works = () => {
           <img className={cn.item_img} src='/img/nails4.jpg' alt='Nails art' />
         </li>
       </ul>
-      <button className={cn.gallery_btn}>SHOW ALL</button>
+      <button className={cn.gallery_btn} onClick={() => navigate('/gallery')}>
+        SHOW ALL
+      </button>
     </section>
   );
 };
