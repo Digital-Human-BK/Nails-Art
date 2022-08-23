@@ -1,7 +1,7 @@
 import cn from './Contacts.module.css';
 import InnerWidth from '../../common/InnerWidth/InnerWidth';
 
-const Contacts = () => {
+const Contacts = ({contacts}) => {
   return (
     <section id='contacts' className={cn.contacts}>
       <div className={cn.left} />
@@ -14,10 +14,10 @@ const Contacts = () => {
             <div className={cn.content_wrapper}>
               <h2 className={cn.content_title}>Location</h2>
               <ul className={cn.content_details}>
-                <li className={cn.details}>Ivan Vazov 68</li>
-                <li className={cn.details}>Lukovit</li>
-                <li className={cn.details}>5700</li>
-                <li className={`${cn.details} ${cn.phone}`}>0888 777 666</li>
+                <li className={cn.details}>{contacts?.street}</li>
+                <li className={cn.details}>{contacts?.town}</li>
+                <li className={cn.details}>{contacts?.postCode}</li>
+                <li className={`${cn.details} ${cn.phone}`}>{contacts?.phone}</li>
               </ul>
 
               <h2 className={cn.content_title}>Follow me</h2>

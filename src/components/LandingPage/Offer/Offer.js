@@ -2,7 +2,7 @@ import cn from './Offer.module.css';
 import InnerWidth from '../../common/InnerWidth/InnerWidth';
 import Button from '../../common/Button/Button';
 
-const Offer = () => {
+const Offer = ({offer}) => {
   return (
     <section id='offer' className={cn.offer}>
       <InnerWidth>
@@ -25,10 +25,7 @@ const Offer = () => {
           <div className={cn.section_desc}>
             <h2 className={cn.slogan}>For beautiful hands and stylish nails</h2>
             <p className={cn.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-              alias quis? Necessitatibus laudantium sed sit exercitationem optio
-              rem totam corrupti? Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Soluta, libero.
+              {offer}
             </p>
             <Button location='/#contacts' classes='right_btn'>Contact me</Button>
           </div>
