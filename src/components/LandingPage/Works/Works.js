@@ -30,7 +30,7 @@ const Works = () => {
           <img className={cn.item_img} src='/img/nails4.jpg' alt='Nails art' />
         </li>
       </ul>
-      <button className={cn.gallery_btn} onClick={() => navigate('/gallery')}>
+      <button className={cn.gallery_btn} onClick={() => navigate('/catalog')}>
         SHOW ALL
       </button>
     </section>

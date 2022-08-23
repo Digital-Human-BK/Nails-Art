@@ -2,15 +2,14 @@ import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase-config';
 
-import cn from './GalleryPage.module.css';
+import cn from './CatalogPage.module.css';
 import LoadingSpinner from '../common/LoadingSpinner/LoadingSpinner';
 
 const imagesRef = collection(db, 'images');
 
-const GalleryPage = () => {
+const CatalogPage = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
-  console.log(loading);
 
   useEffect(() => {
     const getImages = async () => {
@@ -24,6 +23,8 @@ const GalleryPage = () => {
         console.log(formattedData);
         setImages(formattedData);
       } catch (err) {
+        console.log(err.message);
+        alert('Something went wrong');
       } finally {
         setLoading(false);
       }
@@ -39,6 +40,7 @@ const GalleryPage = () => {
     <section className={cn.gallery}>
       <div className={cn.gallery_wrapper}>
         <ul className={cn.gallery_list}>
+
           {images.length > 0 &&
             images.map((img, i) => {
               return (
@@ -52,6 +54,7 @@ const GalleryPage = () => {
                 </li>
               );
             })}
+
         </ul>
       </div>
       {images.length === 0 && <h2 className={cn.no_content}>No images yet!</h2>}
@@ -59,4 +62,4 @@ const GalleryPage = () => {
   );
 };
 
-export default GalleryPage;
+export default CatalogPage;

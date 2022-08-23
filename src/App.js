@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import LandingPage from './components/LandingPage/LandingPage';
-import GalleryPage from './components/GalleryPage/GalleryPage';
+import CatalogPage from './components/CatalogPage/CatalogPage';
+import AdminPage from './components/AdminPage/AdminPage';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path='/gallery' element={<GalleryPage />} />
+        <Route path='/catalog' element={<CatalogPage />} />
+        <Route path='/admin' element={<AdminPage />} />
       </Routes>
 
       <Footer />

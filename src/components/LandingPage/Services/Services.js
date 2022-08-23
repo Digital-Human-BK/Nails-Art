@@ -14,8 +14,8 @@ const Services = () => {
         </p>
         <ul className={cn.services_list}>
           <li className={cn.list_item}>
-            <img className={cn.item_img} src="/img/acrilic.jpg" alt="Acrilic Set" />
-            <h3 className={cn.item_title}>Acrilic set</h3>
+            <img className={cn.item_img} src="/img/acrylic.jpg" alt="Acrylic Set" />
+            <h3 className={cn.item_title}>Acrylic set</h3>
             <p className={cn.item_price}>$25*</p>
           </li>
           <li className={cn.list_item}>
