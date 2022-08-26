@@ -3,7 +3,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase-config';
 
 import cn from './CatalogPage.module.css';
-import LoadingSpinner from '../common/LoadingSpinner/LoadingSpinner';
+import LoadingModal from '../common/LoadingModal/LoadingModal';
 
 const imagesRef = collection(db, 'images');
 
@@ -32,12 +32,9 @@ const CatalogPage = () => {
     getImages();
   }, []);
 
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-
   return (
     <section className={cn.gallery}>
+      {loading && <LoadingModal/>}
       <div className={cn.gallery_wrapper}>
         <ul className={cn.gallery_list}>
 
@@ -57,7 +54,7 @@ const CatalogPage = () => {
 
         </ul>
       </div>
-      {images.length === 0 && <h2 className={cn.no_content}>No images yet!</h2>}
+      {!loading && images.length === 0 && <h2 className={cn.no_content}>No images yet!</h2>}
     </section>
   );
 };

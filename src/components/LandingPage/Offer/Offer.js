@@ -7,7 +7,7 @@ const Offer = ({offer}) => {
     <section id='offer' className={cn.offer}>
       <InnerWidth>
         <h2 className={cn.section_title}>
-          I offer vip <strong>nail services</strong>
+          Какво ще откриете <strong>тук</strong>?
         </h2>
         <div className={cn.content}>
           <img
@@ -23,11 +23,11 @@ const Offer = ({offer}) => {
             alt='circle'
           />
           <div className={cn.section_desc}>
-            <h2 className={cn.slogan}>For beautiful hands and stylish nails</h2>
+            <h2 className={cn.slogan}>За красиви нокти и здрава кожа</h2>
             <p className={cn.description}>
               {offer}
             </p>
-            <Button location='/#contacts' classes='right_btn'>Contact me</Button>
+            <Button location='/#contacts' classes='right_btn'>Запиши час</Button>
           </div>
         </div>
       </InnerWidth>

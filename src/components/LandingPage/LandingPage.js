@@ -31,8 +31,7 @@ const LandingPage = () => {
           id: doc.id,
         }));
         const formattedPriceData = pricesData.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
+          ...doc.data()
         }));
 
         setContent(formattedContentData[0]);

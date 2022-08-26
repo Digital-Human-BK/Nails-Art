@@ -7,32 +7,32 @@ const Navbar = ({toggleNav, showNav}) => {
       <ul onClick={toggleNav} className={cn.nav_links}>
         <li className={cn.links_item}>
           <HashLink className={cn.link} to={'/#home'}>
-            home
+            НАЧАЛО
           </HashLink>
         </li>
         <li className={cn.links_item}>
           <HashLink className={cn.link} to={'/#offer'}>
-            offer
+            ИНФО
           </HashLink>
         </li>
         <li className={cn.links_item}>
           <HashLink className={cn.link} to={'/#services'}>
-            services
+            УСЛУГИ
           </HashLink>
         </li>
         <li className={cn.links_item}>
           <HashLink className={cn.link} to={'/#about'}>
-            about me
+            ЗА МЕН
           </HashLink>
         </li>
         <li className={cn.links_item}>
-          <HashLink className={cn.link} to={'/#works'}>
-            my work
+          <HashLink className={cn.link} to={'/catalog'}>
+            КАТАЛОГ
           </HashLink>
         </li>
         <li className={cn.links_item}>
           <HashLink className={cn.link} to={'/#contacts'}>
-            contacts
+            КОНТАКТИ
           </HashLink>
         </li>
       </ul>

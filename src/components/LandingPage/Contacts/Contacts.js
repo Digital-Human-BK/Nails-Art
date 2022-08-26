@@ -12,7 +12,7 @@ const Contacts = ({contacts}) => {
         <InnerWidth>
           <div className={cn.content_container}>
             <div className={cn.content_wrapper}>
-              <h2 className={cn.content_title}>Location</h2>
+              <h2 className={cn.content_title}>Намери ме</h2>
               <ul className={cn.content_details}>
                 <li className={cn.details}>{contacts?.street}</li>
                 <li className={cn.details}>{contacts?.town}</li>
@@ -20,7 +20,7 @@ const Contacts = ({contacts}) => {
                 <li className={`${cn.details} ${cn.phone}`}>{contacts?.phone}</li>
               </ul>
 
-              <h2 className={cn.content_title}>Follow me</h2>
+              <h2 className={cn.content_title}>Последвай ме</h2>
               <ul className={cn.socials}>
                 <li>
                   <a
@@ -53,13 +53,8 @@ const Contacts = ({contacts}) => {
                   </a>
                 </li>
               </ul>
-              <p className={cn.message}>See You soon!</p>
+              <p className={cn.message}>Очаквам те!</p>
             </div>
-            {/* <img
-              className={cn.content_img}
-              src='/img/contacts.jpg'
-              alt='Nail Polish'
-            /> */}
             <iframe
               title='Studio Location'
               className={cn.map}

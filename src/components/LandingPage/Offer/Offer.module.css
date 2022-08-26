@@ -2,6 +2,7 @@
   width: 100%;
   background-color: var(--clr-bg);
   padding: 3rem 0;
+  min-height: 800px;
 }
 
 .section_title {
@@ -52,6 +53,7 @@
   font-size: 1rem;
   text-align: left;
   line-height: 2;
+  text-align: justify;
 }
 
 @media screen and (min-width: 768px){

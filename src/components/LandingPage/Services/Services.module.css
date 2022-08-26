@@ -42,7 +42,8 @@
   background-color: var(--clr-primary);
 }
 
-.list_item:hover .item_price {
+.list_item:hover .item_price,
+.list_item:hover .item_img {
   transform: scale(1.2);
 }
 
@@ -50,6 +51,7 @@
   width: 40%;
   border-radius: 50%;
   margin-bottom: 1rem;
+  transition: 0.2s linear;
 }
 
 .item_title {
