@@ -1,7 +1,7 @@
 import cn from './Contacts.module.css';
 import InnerWidth from '../../common/InnerWidth/InnerWidth';
 
-const Contacts = ({contacts}) => {
+const Contacts = ({ contacts }) => {
   return (
     <section id='contacts' className={cn.contacts}>
       <div className={cn.left} />
@@ -12,12 +12,13 @@ const Contacts = ({contacts}) => {
         <InnerWidth>
           <div className={cn.content_container}>
             <div className={cn.content_wrapper}>
+              <h2 className={cn.phone}>{contacts?.phone}</h2>
+
               <h2 className={cn.content_title}>Намери ме</h2>
               <ul className={cn.content_details}>
                 <li className={cn.details}>{contacts?.street}</li>
                 <li className={cn.details}>{contacts?.town}</li>
                 <li className={cn.details}>{contacts?.postCode}</li>
-                <li className={`${cn.details} ${cn.phone}`}>{contacts?.phone}</li>
               </ul>
 
               <h2 className={cn.content_title}>Последвай ме</h2>
@@ -53,7 +54,7 @@ const Contacts = ({contacts}) => {
                   </a>
                 </li>
               </ul>
-              <p className={cn.message}>Очаквам те!</p>
+              <h2 className={cn.message}>Очаквам те!</h2>
             </div>
             <iframe
               title='Studio Location'

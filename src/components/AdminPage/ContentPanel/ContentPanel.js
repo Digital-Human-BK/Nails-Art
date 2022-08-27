@@ -103,7 +103,7 @@ const ContentPanel = () => {
           <textarea
             className={`${cn.content_area} ${cn.large}`}
             name='about'
-            maxLength={840}
+            maxLength={1400}
             defaultValue={content.about}
           />
         </label>

@@ -1,7 +1,7 @@
 .contacts {
   width: 100%;
-  height: calc(80vh + 55vw);
-  min-height: 740px;
+  height: calc(70vh + 55vw);
+  min-height: 750px;
   /* height: calc(70vh + 55vw); */
   position: relative;
   display: flex;
@@ -37,28 +37,30 @@
   width: 100%;
 }
 
-.content_title {
+.content_title, 
+.message {
   color: var(--clr-accent);
-  font-size: 1.6rem;
-  letter-spacing: 4px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
 }
 
 .content_details {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
-.details, 
-.message {
+.details {
   color: var(--clr-accent);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .phone {
+  color: var(--clr-accent);
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 3rem;
 }
 
 .message {

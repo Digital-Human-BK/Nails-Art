@@ -21,12 +21,20 @@
   margin-bottom: 2rem;
 }
 
+.content_title {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--clr-accent);
+  margin-bottom: 0.5rem;
+}
+
 .content_desc {
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   .content_img {
     width: 60%;
     margin: 0 auto;
@@ -39,7 +47,7 @@
   }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .content {
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -63,8 +71,12 @@
   }
   .content_img {
     width: 30%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
+  }
+
+  .content_title {
+    text-align: left;
   }
 
   .side_info {

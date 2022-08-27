@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 import cn from './Header.module.css';
-import InnerWidth from '../common/InnerWidth/InnerWidth';
 import Navbar from './Navbar/Navbar';
+import InnerWidth from '../common/InnerWidth/InnerWidth';
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);

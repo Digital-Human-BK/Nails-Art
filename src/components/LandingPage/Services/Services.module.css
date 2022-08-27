@@ -40,6 +40,11 @@
   width: 100%;
   padding: 2rem 0;
   background-color: var(--clr-primary);
+  transition: 0.2s linear;
+}
+
+.list_item:hover {
+  background-color: var(--clr-bg);
 }
 
 .list_item:hover .item_price,
@@ -58,7 +63,10 @@
   color: var(--clr-accent);
   font-size: 1.25rem;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+}
+
+.item_desc {
+  color: var(--clr-footer);
 }
 
 .item_price {

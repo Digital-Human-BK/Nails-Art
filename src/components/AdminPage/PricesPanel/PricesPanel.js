@@ -17,15 +17,30 @@ const PricesPanel = () => {
 
     const formData = new FormData(ev.target);
 
-    const acrylic = formData.get('acrylic');
-    const shellac = formData.get('shellac');
-    const french = formData.get('french');
+    const gelManicure = formData.get('gelManicure');
+    const strengthening = formData.get('strengthening');
+    const extension = formData.get('extension');
     const repair = formData.get('repair');
+    const removal = formData.get('removal');
+    const repairSingle = formData.get('repairSingle');
+    const decorations = formData.get('decorations');
+    const decorationsArt = formData.get('decorationsArt');
 
     try {
       setLoading(true);
       const priceListDoc = doc(db, 'prices', 'price-list');
-      const newPrices = {acrylic, shellac, french, repair}
+
+      const newPrices = {
+        gelManicure,
+        strengthening,
+        extension,
+        repair,
+        removal,
+        repairSingle,
+        decorations,
+        decorationsArt,
+      };
+      
       await updateDoc(priceListDoc, newPrices);
     } catch (err) {
       alert(err.message);
@@ -57,38 +72,42 @@ const PricesPanel = () => {
 
   return (
     <div className={cn.prices}>
-      {loading && <LoadingModal/>}
+      {loading && <LoadingModal />}
       <h2 className={cn.title}>Change Prices</h2>
-      <form method='POST' className={cn.prices_form} onSubmit={submitChangesHandler}>
+      <form
+        method='POST'
+        className={cn.prices_form}
+        onSubmit={submitChangesHandler}
+      >
         <div className={cn.inputs_wrapper}>
           <label className={cn.label}>
-            Acrylic set
+            Gel manicure
             <input
               className={cn.price_input}
               type='number'
-              name='acrylic'
+              name='gelManicure'
               min={0}
-              defaultValue={prices.acrylic}
+              defaultValue={prices.gelManicure}
             />
           </label>
           <label className={cn.label}>
-            Shellac
+            Strengthening
             <input
               className={cn.price_input}
               type='number'
-              name='shellac'
+              name='strengthening'
               min={0}
-              defaultValue={prices.shellac}
+              defaultValue={prices.strengthening}
             />
           </label>
           <label className={cn.label}>
-            French
+            Extension
             <input
               className={cn.price_input}
               type='number'
-              name='french'
+              name='extension'
               min={0}
-              defaultValue={prices.french}
+              defaultValue={prices.extension}
             />
           </label>
           <label className={cn.label}>
@@ -101,10 +120,48 @@ const PricesPanel = () => {
               defaultValue={prices.repair}
             />
           </label>
+          <label className={cn.label}>
+            Gel removal
+            <input
+              className={cn.price_input}
+              type='number'
+              name='removal'
+              min={0}
+              defaultValue={prices.removal}
+            />
+          </label>
+          <label className={cn.label}>
+            Single nail repair
+            <input
+              className={cn.price_input}
+              type='number'
+              name='repairSingle'
+              min={0}
+              defaultValue={prices.repairSingle}
+            />
+          </label>
+          <label className={cn.label}>
+            Decorations
+            <input
+              className={cn.price_input}
+              type='number'
+              name='decorations'
+              min={0}
+              defaultValue={prices.decorations}
+            />
+          </label>
+          <label className={cn.label}>
+            Art decorations
+            <input
+              className={cn.price_input}
+              type='number'
+              name='decorationsArt'
+              min={0}
+              defaultValue={prices.decorationsArt}
+            />
+          </label>
         </div>
-        <button className={cn.submit_btn}>
-          Submit
-        </button>
+        <button className={cn.submit_btn}>Submit</button>
       </form>
     </div>
   );

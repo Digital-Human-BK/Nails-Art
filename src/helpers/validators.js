@@ -50,7 +50,7 @@ export const validateContent = (offer, services, about, contacts) => {
     throw new Error('Services text must be between 180 and 230 characters long');
   }
 
-  if(about.length < 800 || about.length > 840) {
+  if(about.length < 800 || about.length > 1400) {
     throw new Error('About text must be between 800 and 840 characters long');
   }
   

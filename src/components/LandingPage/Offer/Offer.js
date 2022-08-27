@@ -1,6 +1,6 @@
 import cn from './Offer.module.css';
-import InnerWidth from '../../common/InnerWidth/InnerWidth';
 import Button from '../../common/Button/Button';
+import InnerWidth from '../../common/InnerWidth/InnerWidth';
 
 const Offer = ({offer}) => {
   return (

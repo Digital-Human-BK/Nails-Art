@@ -1,4 +1,5 @@
 import { HashLink } from 'react-router-hash-link';
+
 import cn from './Navbar.module.css';
 
 const Navbar = ({toggleNav, showNav}) => {
