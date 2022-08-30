@@ -1,0 +1,64 @@
+.login  {
+  width: 100%;
+  min-height: 85vh;
+  padding-top: 20vh ;
+}
+
+.title {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+.login_form {
+  width: 80%;
+  max-width: 600px;
+  padding: 1rem 1rem;
+  margin: 2rem auto;
+  border-radius: 4px;
+  background-color: var(--clr-bg-dark);
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--clr-accent);
+  margin: 1rem 0;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  border: 2px solid var(--clr-admin);
+  border-radius: 4px;
+  outline: none;
+}
+
+.input:focus {
+  border: 2px solid var(--clr-accent);
+}
+
+.submit_btn {
+  display: block;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  color: var(--clr-primary);
+  background-color: var(--clr-accent);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.submit_btn:hover {
+  opacity: 0.85;
+}
