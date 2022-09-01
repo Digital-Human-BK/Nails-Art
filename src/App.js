@@ -13,9 +13,9 @@ import LoginPage from './components/LoginPage/LoginPage';
 function App() {
   return (
     <>
-      <Header />
-
       <AuthProvider>
+
+      <Header />
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/login' element={<LoginPage />} />

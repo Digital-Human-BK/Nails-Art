@@ -20,7 +20,6 @@ const CatalogPage = () => {
           ...doc.data(),
           id: doc.id,
         }));
-        console.log(formattedData);
         setImages(formattedData);
       } catch (err) {
         console.log(err.message);

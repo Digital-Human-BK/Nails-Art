@@ -45,7 +45,6 @@ const ImagePanel = () => {
         }
       );
       const file = await res.json();
-      console.log(file);
       const url = file.secure_url;
 
       validateImageCaption(imageCaption);

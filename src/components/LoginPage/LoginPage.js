@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 
-import { auth } from '../../firebase-config';
 import useAuthContext from '../../hooks/useAuthContext';
 
 import cn from './LoginPage.module.css';
@@ -11,8 +9,7 @@ import LoadingModal from '../common/LoadingModal/LoadingModal';
 const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { onAuth } = useAuthContext();
-
+  const { signIn } = useAuthContext();
   const [loading, setLoading] = useState(false);
 
   const submitHandler = async (ev) => {
@@ -24,9 +21,7 @@ const LoginPage = () => {
     const password = formData.get('pass').trim();
     try {
       setLoading(true);
-      const credentials = await signInWithEmailAndPassword(auth, email, password);
-      onAuth(credentials.user);
-      console.log(credentials.user);
+      await signIn(email, password);
       navigate(location.state?.from?.pathname, { replace: true });
     } catch (err) {
       alert(err.message);

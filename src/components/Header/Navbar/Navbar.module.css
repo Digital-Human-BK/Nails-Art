@@ -23,7 +23,6 @@
 .links_item {
   display: inline-block;
   padding: 0.5rem 1rem;
-  
 }
 
 .link {
@@ -32,7 +31,16 @@
   color: var(--clr-primary);
 }
 
-@media screen and (min-width: 650px) {
+.logout_btn {
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--clr-primary);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
   .navbar {
     top: 40px;
   }

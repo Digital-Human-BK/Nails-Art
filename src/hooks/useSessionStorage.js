@@ -1,19 +1,19 @@
 import { useState } from 'react';
 
-const useLocalStorage = (key, initialValue) => {
+const useSessionStorage = (key, initialValue) => {
   const [state, setState] = useState(() => {
     try {
-      const item = localStorage.getItem(key);
+      const item = sessionStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
       return initialValue;
     }
   });
 
   const setItem = (value) => {
     try {
-      localStorage.setItem(key, JSON.stringify(value));
+      sessionStorage.setItem(key, JSON.stringify(value));
       setState(value);
     } catch (err) {
       console.error(err);
@@ -23,4 +23,4 @@ const useLocalStorage = (key, initialValue) => {
   return [state, setItem];
 };
 
-export default useLocalStorage;
+export default useSessionStorage;

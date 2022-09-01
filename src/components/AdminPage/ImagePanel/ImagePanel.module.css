@@ -97,6 +97,7 @@
   color: var(--clr-primary);
   background-color: var(--clr-delete);
   transition: .2s linear;
+  cursor: pointer;
 }
 
 .image_item:hover {

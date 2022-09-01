@@ -12,15 +12,15 @@ const AdminPage = () => {
 
   const setToOption = (value) => {
     setOption(value);
-  }
+  };
 
   return (
     <section className={cn.admin}>
       <h2 className={cn.title}>Hello Natalia</h2>
-      <Options option={option} setToOption={setToOption}/>
-      {option === 'image' && <ImagePanel/>}
-      {option === 'prices' && <PricesPanel/>}
-      {option === 'content' && <ContentPanel/>}
+      <Options option={option} setToOption={setToOption} />
+      {option === 'image' && <ImagePanel />}
+      {option === 'prices' && <PricesPanel />}
+      {option === 'content' && <ContentPanel />}
     </section>
   );
 };

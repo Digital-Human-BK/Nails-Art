@@ -4,7 +4,7 @@ import useAuthContext from '../../../hooks/useAuthContext';
 const RequireAuth = () => {
   const location = useLocation();
   const { user } = useAuthContext();
-  return (user.email 
+  return (user?.email 
     ? <Outlet />
     : <Navigate to='/login' state={{ from: location }} replace />
   );
