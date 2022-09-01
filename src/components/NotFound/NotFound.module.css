@@ -1,0 +1,60 @@
+.not_found {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 80px;
+  height: 90vh;
+  background: url(/public/img/not-found-mobile.jpg) no-repeat center
+    center/cover;
+}
+
+.content {
+  width: 80%;
+}
+
+.oops {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--clr-bg);
+  margin-top: 5rem;
+  margin-bottom: 0.25rem;
+}
+
+.message {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.home_btn {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  color: var(--clr-primary);
+  background-color: var(--clr-accent);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s linear;
+  margin-bottom: 8rem;
+}
+
+.home_btn:hover {
+  opacity: 0.85;
+}
+
+@media screen and (min-width: 550px) {
+  .not_found {
+    justify-content: flex-end;
+    align-items: flex-start;
+    background: url(/public/img/not-found.jpg) no-repeat center center/cover;
+  }
+
+  .content {
+    width: 70%;
+  }
+}

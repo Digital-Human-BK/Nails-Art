@@ -9,6 +9,7 @@ import AdminPage from './components/AdminPage/AdminPage';
 import Footer from './components/Footer/Footer';
 import RequireAuth from './components/common/RequireAuth/RequireAuth';
 import LoginPage from './components/LoginPage/LoginPage';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/admin' element={<AdminPage />} />
           </Route>
 
+          <Route path='*' element={<NotFound/>} />
         </Routes>
       </AuthProvider>
 
