@@ -5,12 +5,14 @@ import { db } from '../../../firebase-config';
 
 import cn from './PricesPanel.module.css';
 import LoadingModal from '../../common/LoadingModal/LoadingModal';
+import ErrorModal from '../../common/ErrorModal/ErrorModal';
 
 const pricesRef = collection(db, 'prices');
 
 const PricesPanel = () => {
   const [prices, setPrices] = useState({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const submitChangesHandler = async (ev) => {
     ev.preventDefault();
@@ -43,11 +45,15 @@ const PricesPanel = () => {
       
       await updateDoc(priceListDoc, newPrices);
     } catch (err) {
-      alert(err.message);
+      setError(err.message)
     } finally {
       setLoading(false);
     }
   };
+
+  const closeErrorHandler = ()=> {
+    setError(null)
+  }
 
   useEffect(() => {
     const getPrices = async () => {
@@ -62,7 +68,7 @@ const PricesPanel = () => {
 
         setPrices(formattedData[0]);
       } catch (err) {
-        alert(err.message);
+        setError(err.message)
       } finally {
         setLoading(false);
       }
@@ -73,6 +79,7 @@ const PricesPanel = () => {
   return (
     <div className={cn.prices}>
       {loading && <LoadingModal />}
+      {error && <ErrorModal error={error} closeError={closeErrorHandler}/>}
       <h2 className={cn.title}>Change Prices</h2>
       <form
         method='POST'

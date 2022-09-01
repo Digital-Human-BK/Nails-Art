@@ -15,6 +15,7 @@ import {
 
 import cn from './ImagePanel.module.css';
 import LoadingModal from '../../common/LoadingModal/LoadingModal';
+import ErrorModal from '../../common/ErrorModal/ErrorModal';
 
 const imagesRef = collection(db, 'images');
 
@@ -23,6 +24,7 @@ const ImagePanel = () => {
   const [imageCaption, setImageCaption] = useState('');
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const selectedFileHandler = (ev) => {
     setImageFile(ev.target.files[0]);
@@ -50,7 +52,7 @@ const ImagePanel = () => {
       validateImageCaption(imageCaption);
       await addDoc(imagesRef, { imageUrl: url, caption: imageCaption });
     } catch (err) {
-      alert(err.message);
+      setError(err.message)
     } finally {
       setLoading(false);
     }
@@ -67,7 +69,7 @@ const ImagePanel = () => {
 
       setImages(formattedData);
     } catch (err) {
-      alert(err.message);
+      setError(err.message)
     } finally {
       setLoading(false);
     }
@@ -81,15 +83,20 @@ const ImagePanel = () => {
       const updatedImages = images.filter((img) => img.id !== id);
       setImages(updatedImages);
     } catch (err) {
-      alert(err.message);
+      setError(err.message);
     } finally {
       setLoading(false);
     }
   };
 
+  const closeErrorHandler = () => {
+    setError(null);
+  };
+
   return (
     <div className={cn.image_panel}>
       {loading && <LoadingModal />}
+      {error && <ErrorModal error={error} closeError={closeErrorHandler} />}
       <div className={cn.image_upload}>
         <h2>Image Upload</h2>
         <input

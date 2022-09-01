@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import useAuthContext from '../../hooks/useAuthContext';
 
 import cn from './LoginPage.module.css';
+import ErrorModal from '../common/ErrorModal/ErrorModal';
 import LoadingModal from '../common/LoadingModal/LoadingModal';
 
 const LoginPage = () => {
@@ -11,6 +12,7 @@ const LoginPage = () => {
   const location = useLocation();
   const { signIn } = useAuthContext();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const submitHandler = async (ev) => {
     ev.preventDefault();
@@ -22,17 +24,22 @@ const LoginPage = () => {
     try {
       setLoading(true);
       await signIn(email, password);
-      navigate(location.state?.from?.pathname, { replace: true });
+      navigate(location.state?.from?.pathname || '/admin', { replace: true });
     } catch (err) {
-      alert(err.message);
+      setError(err.message)
     } finally {
       setLoading(false);
     }
   };
 
+  const closeErrorHandler = () => {
+    setError(null);
+  }
+
   return (
     <section className={cn.login}>
       {loading && <LoadingModal />}
+      {error && <ErrorModal error={error} closeError={closeErrorHandler}/>}
       <h2 className={cn.title}>Please Login</h2>
       <form method='POST' className={cn.login_form} onSubmit={submitHandler}>
         <label className={cn.label}>

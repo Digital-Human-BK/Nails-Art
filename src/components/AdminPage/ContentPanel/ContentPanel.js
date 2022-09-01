@@ -6,12 +6,14 @@ import { validateContent } from '../../../helpers/validators';
 
 import cn from './ContentPanel.module.css';
 import LoadingModal from '../../common/LoadingModal/LoadingModal';
+import ErrorModal from '../../common/ErrorModal/ErrorModal';
 
 const contentRef = collection(db, 'content');
 
 const ContentPanel = () => {
   const [content, setContent] = useState({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const submitChangesHandler = async (ev) => {
     ev.preventDefault();
@@ -26,7 +28,7 @@ const ContentPanel = () => {
     const postCode = formData.get('postCode').trim();
     const phone = formData.get('phone').trim();
 
-    const contacts = {street, town, postCode, phone};
+    const contacts = { street, town, postCode, phone };
 
     try {
       setLoading(true);
@@ -38,17 +40,20 @@ const ContentPanel = () => {
         offer,
         services,
         about,
-        contacts
+        contacts,
       };
 
       await updateDoc(contentDoc, newContent);
     } catch (err) {
-      console.log(err.message);
-      alert(err.message);
+      setError(err.message);
     } finally {
       setLoading(false);
     }
   };
+
+  const closeErrorHandler = () => {
+    setError(null);
+  }
 
   useEffect(() => {
     const getContent = async () => {
@@ -63,7 +68,7 @@ const ContentPanel = () => {
 
         setContent(formattedData[0]);
       } catch (err) {
-        alert('Something went wrong');
+        setError(err.message);
       } finally {
         setLoading(false);
       }
@@ -73,7 +78,8 @@ const ContentPanel = () => {
 
   return (
     <div className={cn.content}>
-      {loading && <LoadingModal/>}
+      {loading && <LoadingModal />}
+      {error && <ErrorModal error={error} closeError={closeErrorHandler}/>}
       <h2 className={cn.title}>Change Content</h2>
       <form
         method='POST'
