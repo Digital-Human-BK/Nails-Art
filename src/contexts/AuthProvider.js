@@ -16,14 +16,14 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useSessionStorage('nailsArtUser', null);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (fbUser) => {
-      if (fbUser) {
-        setUser(fbUser);
+    onAuthStateChanged(auth, (userCredentials) => {
+      if (userCredentials) {
+        setUser(userCredentials);
       } else {
         setUser(null);
       }
     });
-  }, []);
+  }, [setUser]);
 
   const logout = async () => {
     await signOut(auth);
