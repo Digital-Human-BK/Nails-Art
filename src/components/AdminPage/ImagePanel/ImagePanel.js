@@ -50,9 +50,13 @@ const ImagePanel = () => {
       const url = file.secure_url;
 
       validateImageCaption(imageCaption);
-      await addDoc(imagesRef, { imageUrl: url, caption: imageCaption });
+      await addDoc(imagesRef, {
+        imageUrl: url,
+        caption: imageCaption,
+        createdAt: Date.now(),
+      });
     } catch (err) {
-      setError(err.message)
+      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -69,7 +73,7 @@ const ImagePanel = () => {
 
       setImages(formattedData);
     } catch (err) {
-      setError(err.message)
+      setError(err.message);
     } finally {
       setLoading(false);
     }
