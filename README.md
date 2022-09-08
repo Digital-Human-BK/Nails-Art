@@ -36,13 +36,17 @@
   </ol>
 </details>
 
+<!-- ABOUT -->
+
 ## About The Project
 
 This project is build as an exercise on what I have learned about React, but it will also serve it's real purpose being promo website.
 
+<!-- BUILD -->
+
 ### Built With
 
-The app is build using ReactJS 18 and Firebase 9
+The app is build using ReactJS 18 and Firebase 9  
 [![React][react.js]][react-url]
 
 <!-- GETTING STARTED -->
@@ -51,7 +55,9 @@ The app is build using ReactJS 18 and Firebase 9
 
 Live demo: [https://natalia-nails.netlify.app](https://natalia-nails.netlify.app)
 
-For local installation please keep in mind that this app uses Firebase 9, therefore you will need to setup your own Firebase app for a back-end.
+For local installation please keep in mind that this app uses Firebase 9, therefore you will need to setup your own Firebase app as a back-end.
+
+<!-- PREREQUISITES -->
 
 ### Prerequisites
 
@@ -61,6 +67,8 @@ Make sure you have npm installed on your machine.
   ```sh
   npm install npm@latest -g
   ```
+
+<!-- INSTALLATION -->
 
 ### Installation
 
@@ -91,6 +99,8 @@ Make sure you have npm installed on your machine.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- USAGE -->
+
 ## Usage
 
 This Web App consits of two main parts:
@@ -113,6 +123,8 @@ This Web App consits of two main parts:
    </div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -123,13 +135,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-I'm Biser Karazhov - [Linked In](https://www.linkedin.com/in/biser-karadzhov-b03594238/)
+Biser Karazhov - [Linked In](https://www.linkedin.com/in/biser-karadzhov-b03594238/)
 
 Email me: [biser.karadzhov@gmail.com](biser.karadzhov@gmail.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Links -->
+<!-- LINKS -->
 
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
