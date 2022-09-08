@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 <div align="center">
   <a href="https://natalia-nails.netlify.app">
     <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662642557/natalia-nails/NNthumb_m5fzfv.jpg" alt="Logo" width="800">
@@ -42,16 +43,15 @@ This project is build as an exercise on what I have learned about React, but it 
 ### Built With
 
 The app is build using ReactJS 18 and Firebase 9
-
-- [![React][react.js]][react-url]
+[![React][react.js]][react-url]
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
 
-This project can be seen life at [https://natalia-nails.netlify.app](https://natalia-nails.netlify.app)
+Live demo: [https://natalia-nails.netlify.app](https://natalia-nails.netlify.app)
 
-For local installation you will have to keep in mind, this app uses Firebase 9, therefore you will need to setup your own Firebase app for a back-end.
+For local installation please keep in mind that this app uses Firebase 9, therefore you will need to setup your own Firebase app for a back-end.
 
 ### Prerequisites
 
@@ -72,7 +72,7 @@ Make sure you have npm installed on your machine.
    ```sh
    npm install
    ```
-3. Setup your Firebase in `firebase-config.js`
+3. Setup your Firebase in `firebase-config.js` file
    ```js
    const firebaseConfig = {
      apiKey: YOUR_FIREBASE_KEY_HERE,
@@ -85,10 +85,9 @@ Make sure you have npm installed on your machine.
    };
    ```
 4. Run start command and open the app at http://localhost:3000
-
-```sh
-npm start
-```
+   ```sh
+   npm start
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,11 +100,13 @@ This Web App consits of two main parts:
    <div align="center">
       <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662645941/natalia-nails/landing_t20o8v.jpg" width="800"/>
    </div>
+   <br />
 2. Private, accessible only by admins, which can add, update, delete content like prices, descriptions, services, catalog images etc.  
-    To access the admin panel it's required manual navigation to https://natalia-nails.netlify.app/admin. Successfully logged in users will be able to see and use admin panel.
-    <div align="center">
-      <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646406/natalia-nails/admin_n8znle.jpg" width="800"/>
-   </div>  
+ To access the admin panel it's required manual navigation to https://natalia-nails.netlify.app/admin. Successfully logged in users will be able to see and use admin panel.
+<div align="center">
+<img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646406/natalia-nails/admin_n8znle.jpg" width="800"/>
+   </div>
+   <br />  
     If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an *Unauthorized* pop-up will appear. 
     <div align="center">
       <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646843/natalia-nails/pop_yzfdow.jpg" width="800"/>
