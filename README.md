@@ -113,8 +113,8 @@ This Web App consits of two main parts:
    <br />
 2. Private, accessible only by admins, which can add, update, delete content like prices, descriptions, services, catalog images etc.  
  To access the admin panel it's required manual navigation to https://natalia-nails.netlify.app/admin. Successfully logged in users will be able to see and use admin panel.
-<div align="center">
-<img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646406/natalia-nails/admin_n8znle.jpg" width="800"/>
+   <div align="center">
+   <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646406/natalia-nails/admin_n8znle.jpg" width="800"/>
    </div>
    <br />  
     If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an *Unauthorized* pop-up will appear. 
