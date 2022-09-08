@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+<div align="center">
+  <a href="https://natalia-nails.netlify.app">
+    <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662642557/natalia-nails/NNthumb_m5fzfv.jpg" alt="Logo" width="800">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Nails Art Studio</h3>
 
-## Available Scripts
+  <p align="center">
+    Please read the docs to see all hidden features!
+    <br />
+    <a href="https://natalia-nails.netlify.app"><strong>Explore »</strong></a>
+  </p>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is build as an exercise on what I have learned about React, but it will also serve it's real purpose being promo website.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Built With
 
-### `npm test`
+The app is build using ReactJS 18 and Firebase 9
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [![React][react.js]][react-url]
 
-### `npm run build`
+<!-- GETTING STARTED -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project can be seen life at [https://natalia-nails.netlify.app](https://natalia-nails.netlify.app)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For local installation you will have to keep in mind, this app uses Firebase 9, therefore you will need to setup your own Firebase app for a back-end.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Make sure you have npm installed on your machine.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Digital-Human-BK/Nails-Art.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Setup your Firebase in `firebase-config.js`
+   ```js
+   const firebaseConfig = {
+     apiKey: YOUR_FIREBASE_KEY_HERE,
+     authDomain: YOUR_FIREBASE_KEY_HERE,
+     projectId: YOUR_FIREBASE_KEY_HERE,
+     storageBucket: YOUR_FIREBASE_KEY_HERE,
+     messagingSenderId: YOUR_FIREBASE_KEY_HERE,
+     appId: YOUR_FIREBASE_KEY_HERE,
+     measurementId: YOUR_FIREBASE_KEY_HERE,
+   };
+   ```
+4. Run start command and open the app at http://localhost:3000
 
-## Learn More
+```sh
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+This Web App consits of two main parts:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Public, which has a promotional/representational purpose;
+   This part of the app is what the consumer sees. There are only 2 pages that can be visited. Landing/Home page and Catalog Page
+   <div align="center">
+      <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662645941/natalia-nails/landing_t20o8v.jpg" width="800"/>
+   </div>
+2. Private, accessible only by admins, which can add, update, delete content like prices, descriptions, services, catalog images etc.  
+    To access the admin panel it's required manual navigation to https://natalia-nails.netlify.app/admin. Successfully logged in users will be able to see and use admin panel.
+    <div align="center">
+      <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646406/natalia-nails/admin_n8znle.jpg" width="800"/>
+   </div>  
+    If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an *Unauthorized* pop-up will appear. 
+    <div align="center">
+      <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646843/natalia-nails/pop_yzfdow.jpg" width="800"/>
+   </div>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-### Making a Progressive Web App
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- CONTACT -->
 
-### Advanced Configuration
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+I'm Biser Karazhov - [Linked In](https://www.linkedin.com/in/biser-karadzhov-b03594238/)
 
-### Deployment
+Email me: [biser.karadzhov@gmail.com](biser.karadzhov@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run build` fails to minify
+<!-- Links -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/

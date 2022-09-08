@@ -34,6 +34,7 @@
 .logout_btn {
   border: none;
   font-weight: 700;
+  font-size: 1rem;
   letter-spacing: 1px;
   color: var(--clr-primary);
   background-color: transparent;
