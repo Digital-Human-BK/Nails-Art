@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+
 <div align="center">
   <a href="https://natalia-nails.netlify.app">
     <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662642557/natalia-nails/NNthumb_m5fzfv.jpg" alt="Logo" width="800">
@@ -118,7 +119,14 @@ This Web App consits of two main parts:
    </div>
    <br />  
     If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an *Unauthorized* pop-up will appear.  
-    Test account > email - mike@gmail.com, password - 111111.
+    Test account:
+    ```sh
+    mike@gmail.com
+    ```
+    Password:
+    ```sh
+    111111
+    ```
     <div align="center">
       <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646843/natalia-nails/pop_yzfdow.jpg" width="800"/>
    </div>
