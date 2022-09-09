@@ -4,12 +4,14 @@ import { db } from '../../firebase-config';
 
 import cn from './CatalogPage.module.css';
 import LoadingModal from '../common/LoadingModal/LoadingModal';
+import ErrorModal from '../common/ErrorModal/ErrorModal';
 
 const imagesRef = collection(db, 'images');
 
 const CatalogPage = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const getImages = async () => {
@@ -23,7 +25,7 @@ const CatalogPage = () => {
         setImages(formattedData);
       } catch (err) {
         console.log(err.message);
-        alert('Something went wrong');
+        setError(err.message);
       } finally {
         setLoading(false);
       }
@@ -31,9 +33,14 @@ const CatalogPage = () => {
     getImages();
   }, []);
 
+  const closeErrorHandler = () => {
+    setError(null);
+  }
+
   return (
     <section className={cn.gallery}>
       {loading && <LoadingModal/>}
+      {error && <ErrorModal error={error} closeError={closeErrorHandler}/>}
       <div className={cn.gallery_wrapper}>
         <ul className={cn.gallery_list}>
 
