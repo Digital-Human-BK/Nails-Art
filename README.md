@@ -117,9 +117,11 @@ This Web App consits of two main parts:
    <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646406/natalia-nails/admin_n8znle.jpg" width="800"/>
    </div>
    <br />  
-    If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an *Unauthorized* pop-up will appear.  
-    Test account: `mike@gmail.com`  
-    Password: `111111` 
+    If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an *Unauthorized* pop-up will appear.
+    <br/>
+    Test account: mike@gmail.com 
+    <br/>
+    Password: 111111 
     <div align="center">
       <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646843/natalia-nails/pop_yzfdow.jpg" width="800"/>
    </div>
