@@ -105,19 +105,19 @@ Make sure you have npm installed on your machine.
 
 This Web App consits of two main parts:
 
-1. Public, which has a promotional/representational purpose;
-   This part of the app is what the consumer sees. There are only 2 pages that can be visited. Landing/Home page and Catalog Page
+1. Public, which has a promotional/representational purpose.
+   This part of the app is what the consumer sees. There are only 2 pages that can be visited - Landing/Home page and Catalog Page.
    <div align="center">
       <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662645941/natalia-nails/landing_t20o8v.jpg" width="800"/>
    </div>
    <br />
-2. Private, accessible only by admins, which can add, update, delete content like prices, descriptions, services, catalog images etc.  
+2. Private, accessible only by admins, who can add, update, delete content such as prices, descriptions, services, catalog, images, etc.  
  To access the admin panel it's required manual navigation to https://natalia-nails.netlify.app/admin. Successfully logged in users will be able to see and use admin panel.
    <div align="center">
    <img src="https://res.cloudinary.com/dio4dx3uy/image/upload/v1662646406/natalia-nails/admin_n8znle.jpg" width="800"/>
    </div>
    <br />  
-    If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an *Unauthorized* pop-up will appear.
+    If unauthorized user manages to log-in and access the admin panel and then tries to change, delete or add new data, Firebase will reject the request and an <i>Unauthorized</i> pop-up will appear.
     <br/>
     Test account: mike@gmail.com 
     <br/>
